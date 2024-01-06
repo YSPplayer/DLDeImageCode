@@ -11,16 +11,16 @@ namespace DLDeImageCode
         {
             InitializeComponent();
             string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Image");
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 10; i++)
             {
-                folderPath = Path.Combine(folderPath, i.ToString());
-                if (!Directory.Exists(folderPath))
+                string sfolderPath = Path.Combine(folderPath, i.ToString());
+                if (!Directory.Exists(sfolderPath))
                 {
-                    Directory.CreateDirectory(folderPath);
+                    Directory.CreateDirectory(sfolderPath);
                 }
-                for (int j = 0; j < 1; j++)
+                for (int j = 0; j < 800; j++)
                 {
-                    CreateImageCode(folderPath);
+                    CreateImageCode(sfolderPath);
                 }
 
             }
